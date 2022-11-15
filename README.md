@@ -6,4 +6,4 @@ Objective digital pins like:
 - `DigitalOutputPin` - output
 - `ScopedOn` - RAII switch that turns off when out of scope
 
-Library requires STL and c++17
+Recommended c++17 or greater.
