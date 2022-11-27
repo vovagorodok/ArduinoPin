@@ -23,6 +23,8 @@ public:
     void attachInterrupt(FunctionPtr functionPtr, uint8_t mode);
     void attachInterrupt(MethodPtr methodPtr, ObjectPtr objectPtr, uint8_t mode);
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wpmf-conversions"
     template <typename MethodPtrT, typename ObjectPtrT>
     void attachInterrupt(MethodPtrT methodPtr, ObjectPtrT objectPtr, uint8_t mode) {
         attachInterrupt((MethodPtr)methodPtr, (ObjectPtr)objectPtr, mode);
@@ -31,6 +33,8 @@ public:
     void attachInterrupt(const CallableT& callable, uint8_t mode) {
         attachInterrupt((MethodPtr)&CallableT::operator(), (ObjectPtr)&callable, mode);
     }
+#pragma GCC diagnostic pop
+
 #else
     void attachInterrupt(FunctionPtr functionPtr, PinStatus mode);
 #endif
