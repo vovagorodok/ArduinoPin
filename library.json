@@ -1,0 +1,30 @@
+{
+    "name": "DigitalPin",
+    "version": "1.0.0",
+    "description": "Objective digital pin",
+    "keywords": "objective, digital, pin",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/vovagorodok/DigitalPin"
+    },
+    "authors":
+    [
+      {
+        "name": "vovagorodok",
+        "email": "vovagorodok2@gmail.com",
+        "url": "https://github.com/vovagorodok",
+        "maintainer": true
+      },
+      {
+        "name": "dkwach",
+        "email": "dawid.kwach@gmail.com",
+        "url": "https://github.com/dkwach"
+      }
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/vovagorodok/DigitalPin",
+    "headers": ["DigitalPin.h", "ScopedOn.h"],
+    "frameworks": "arduino",
+    "platforms": ["*"]
+  }
