@@ -87,3 +87,8 @@ DigitalOutputPin& DigitalOutputPin::operator=(const DigitalPin& other)
     setValue(other.value());
     return *this;
 }
+DigitalOutputPin& DigitalOutputPin::operator=(bool value)
+{
+    setValue(value);
+    return *this;
+}

@@ -65,4 +65,5 @@ public:
     DigitalOutputPin(uint8_t num, bool initialValue);
     DigitalOutputPin(uint8_t num, bool initialValue, bool activeState);
     DigitalOutputPin& operator=(const DigitalPin&);
+    DigitalOutputPin& operator=(bool);
 };
