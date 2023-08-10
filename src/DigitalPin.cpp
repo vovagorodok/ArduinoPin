@@ -9,6 +9,24 @@ DigitalPin::DigitalPin(uint8_t num, uint8_t mode, bool activeState) :
     pinMode(num, mode);
 }
 
+DigitalPin::DigitalPin(uint8_t num, uint8_t mode, bool activeState, bool initialValue) :
+    DigitalPin(num, mode, activeState)
+{
+    setValue(initialValue);
+}
+
+DigitalPin& DigitalPin::operator=(const DigitalPin& other)
+{
+    setValue(other.value());
+    return *this;
+}
+
+DigitalPin& DigitalPin::operator=(bool value)
+{
+    setValue(value);
+    return *this;
+}
+
 DigitalPin::operator bool() const
 {
     return value();
@@ -78,15 +96,14 @@ DigitalOutputPin::DigitalOutputPin(uint8_t num) :
 DigitalOutputPin::DigitalOutputPin(uint8_t num, bool initialValue) :
     DigitalOutputPin(num, initialValue, HIGH) {}
 DigitalOutputPin::DigitalOutputPin(uint8_t num, bool initialValue, bool activeState) :
-    DigitalPin(num, OUTPUT, activeState)
-{
-    setValue(initialValue);
-}
+    DigitalPin(num, OUTPUT, activeState, initialValue) {}
+
 DigitalOutputPin& DigitalOutputPin::operator=(const DigitalPin& other)
 {
     setValue(other.value());
     return *this;
 }
+
 DigitalOutputPin& DigitalOutputPin::operator=(bool value)
 {
     setValue(value);

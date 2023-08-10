@@ -6,6 +6,9 @@ class DigitalPin
 public:
     DigitalPin(uint8_t num, uint8_t mode);
     DigitalPin(uint8_t num, uint8_t mode, bool activeState);
+    DigitalPin(uint8_t num, uint8_t mode, bool activeState, bool initialValue);
+    DigitalPin& operator=(const DigitalPin&);
+    DigitalPin& operator=(bool);
 
     operator bool() const;
     bool value() const;
