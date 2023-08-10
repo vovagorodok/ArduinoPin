@@ -44,7 +44,7 @@ public:
 
 private:
     const uint8_t num;
-    const bool activeState;
+    const bool inactiveState;
 };
 
 class DigitalInputPin : public DigitalPin

@@ -4,7 +4,7 @@ DigitalPin::DigitalPin(uint8_t num, uint8_t mode) :
     DigitalPin(num, mode, HIGH) {}
 
 DigitalPin::DigitalPin(uint8_t num, uint8_t mode, bool activeState) :
-    num(num), activeState(activeState)
+    num(num), inactiveState(!activeState)
 {
     pinMode(num, mode);
 }
@@ -34,13 +34,12 @@ DigitalPin::operator bool() const
 
 bool DigitalPin::value() const
 {
-    bool v = digitalRead(num);
-    return activeState ? v : !v;
+    return digitalRead(num) xor inactiveState;
 }
 
 void DigitalPin::setValue(bool value)
 {
-    digitalWrite(num, activeState ? value : !value);
+    digitalWrite(num, inactiveState xor value);
 }
 
 void DigitalPin::on()
