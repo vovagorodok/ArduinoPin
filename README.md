@@ -6,5 +6,3 @@ Objective digital pins like:
 - `DigitalPulledPin` - pulled input
 - `DigitalOutputPin` - output
 - `ScopedOn` - RAII switch that turns off when out of scope
-
-Recommended c++17 or greater.
