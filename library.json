@@ -24,7 +24,7 @@
     ],
     "license": "MIT",
     "homepage": "https://github.com/vovagorodok/DigitalPin",
-    "headers": ["DigitalPin.h", "AnalogPin.h", "ScopedOn.h"],
+    "headers": ["Pins.h", "DigitalPin.h", "AnalogPin.h", "ScopedOn.h"],
     "frameworks": "arduino",
     "platforms": ["*"]
   }
