@@ -17,6 +17,8 @@ public:
     void off();
     void change();
 
+    void setMode(uint8_t mode);
+
     using FunctionPtr = void(*)();
     using ObjectPtr = void*;
     using MethodPtr = void(*)(ObjectPtr);

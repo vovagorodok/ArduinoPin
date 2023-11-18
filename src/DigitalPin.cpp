@@ -57,6 +57,11 @@ void DigitalPin::change()
     setValue(!value());
 }
 
+void DigitalPin::setMode(uint8_t mode)
+{
+    pinMode(num, mode);
+}
+
 void DigitalPin::detachInterrupt()
 {
     ::detachInterrupt(digitalPinToInterrupt(num));
