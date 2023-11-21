@@ -1,4 +1,4 @@
-#include <AnalogPin.h>
+#include <ArduinoPin.h>
 #include <Arduino.h>
 
 #define POTENTIOMETR_NUM 4

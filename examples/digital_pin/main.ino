@@ -1,4 +1,4 @@
-#include <DigitalPin.h>
+#include <ArduinoPin.h>
 #include <Arduino.h>
 
 void buttonChanged() {

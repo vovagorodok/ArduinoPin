@@ -1,5 +1,4 @@
-#include <DigitalPin.h>
-#include <ScopedOn.h>
+#include <ArduinoPin.h>
 #include <Arduino.h>
 
 #define LED_NUM 4

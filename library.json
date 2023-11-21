@@ -1,12 +1,12 @@
 {
-    "name": "DigitalPin",
+    "name": "ArduinoPin",
     "version": "1.0.0",
-    "description": "Objective digital pin",
-    "keywords": "objective, digital, pin",
+    "description": "Objective arduino pin",
+    "keywords": "objective, digital, analog, pin",
     "repository":
     {
       "type": "git",
-      "url": "https://github.com/vovagorodok/DigitalPin"
+      "url": "https://github.com/vovagorodok/ArduinoPin"
     },
     "authors":
     [
@@ -23,8 +23,8 @@
       }
     ],
     "license": "MIT",
-    "homepage": "https://github.com/vovagorodok/DigitalPin",
-    "headers": ["Pin.h", "DigitalPin.h", "AnalogPin.h", "ScopedOn.h"],
+    "homepage": "https://github.com/vovagorodok/ArduinoPin",
+    "headers": ["ArduinoPin.h", "DigitalPin.h", "AnalogPin.h", "ScopedOn.h"],
     "frameworks": "arduino",
     "platforms": ["*"]
   }

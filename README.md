@@ -1,6 +1,6 @@
-# Digital Pin
+# Arduino Pin
 
-Objective digital pins like:
+Objective arduino pins like:
 - `DigitalPin` - pin object, can be used as input or output
 - `DigitalInputPin` - open collector input
 - `DigitalPulledPin` - pulled input
