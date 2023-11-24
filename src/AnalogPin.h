@@ -10,11 +10,16 @@ using AnalogValue = int;
 class AnalogInputPin
 {
 public:
-    AnalogInputPin(uint8_t num);
+  constexpr AnalogInputPin(uint8_t num) :
+    num(num) {}
 
-    operator AnalogValue() const;
-    AnalogValue value() const;
+  inline operator AnalogValue() const {
+    return value();
+  }
+  inline AnalogValue value() const {
+    return analogRead(num);
+  }
 
 private:
-    const uint8_t num;
+  const uint8_t num;
 };
