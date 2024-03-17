@@ -8,6 +8,7 @@ Objective arduino pins like:
 - `AnalogInputPin` - analog input
 - `ScopedOn` - RAII switch that turns off when out of scope
 
+## Configuration
 Library requires c++14 or greater.\
 For PlatformIO. Add to `platformio.ini`:
 ```
