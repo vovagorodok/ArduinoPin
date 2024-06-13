@@ -5,6 +5,7 @@ DigitalPulledPin	KEYWORD1
 DigitalOutputPin	KEYWORD1
 AnalogInputPin KEYWORD1
 ScopedOn KEYWORD1
+ScopedOff KEYWORD1
 
 # Methods and Functions (KEYWORD2)
 on	KEYWORD2

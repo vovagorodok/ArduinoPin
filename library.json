@@ -1,6 +1,6 @@
 {
     "name": "ArduinoPin",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Objective arduino pin",
     "keywords": "objective, digital, analog, pin",
     "repository":
@@ -24,7 +24,7 @@
     ],
     "license": "MIT",
     "homepage": "https://github.com/vovagorodok/ArduinoPin",
-    "headers": ["ArduinoPin.h", "DigitalPin.h", "AnalogPin.h", "ScopedOn.h"],
+    "headers": ["ArduinoPin.h", "DigitalPin.h", "AnalogPin.h", "ScopedSwitch.h"],
     "frameworks": "arduino",
     "platforms": ["*"]
   }

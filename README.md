@@ -6,7 +6,7 @@ Objective arduino pins like:
 - `DigitalPulledPin` - pulled input
 - `DigitalOutputPin` - output
 - `AnalogInputPin` - analog input
-- `ScopedOn` - RAII switch that turns off when out of scope
+- `ScopedOn/Off` - RAII switch that turns off/on when out of scope
 
 ## Configuration
 Library requires c++14 or greater.  
