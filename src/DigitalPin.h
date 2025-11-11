@@ -87,29 +87,29 @@ private:
 class DigitalInputPin : public DigitalPin
 {
 public:
-  constexpr DigitalInputPin(uint8_t num) :
+  inline DigitalInputPin(uint8_t num) :
     DigitalPin(num, INPUT) {}
-  constexpr DigitalInputPin(uint8_t num, bool activeState) :
+  inline DigitalInputPin(uint8_t num, bool activeState) :
     DigitalPin(num, INPUT, activeState) {}
 };
 
 class DigitalPulledPin : public DigitalPin
 {
 public:
-  constexpr DigitalPulledPin(uint8_t num) :
+  inline DigitalPulledPin(uint8_t num) :
     DigitalPulledPin(num, HIGH) {}
-  constexpr DigitalPulledPin(uint8_t num, bool activeState) :
+  inline DigitalPulledPin(uint8_t num, bool activeState) :
     DigitalPin(num, activeState ? INPUT_PULLDOWN : INPUT_PULLUP, activeState) {}
 };
 
 class DigitalOutputPin : public DigitalPin
 {
 public:
-  constexpr DigitalOutputPin(uint8_t num) :
+  inline DigitalOutputPin(uint8_t num) :
     DigitalOutputPin(num, false) {}
-  constexpr DigitalOutputPin(uint8_t num, bool initialValue) :
+  inline DigitalOutputPin(uint8_t num, bool initialValue) :
     DigitalOutputPin(num, initialValue, HIGH) {}
-  constexpr DigitalOutputPin(uint8_t num, bool initialValue, bool activeState) :
+  inline DigitalOutputPin(uint8_t num, bool initialValue, bool activeState) :
     DigitalPin(num, OUTPUT, activeState, initialValue) {}
   inline DigitalOutputPin& operator=(const DigitalPin& other) {
     setValue(other.value());
