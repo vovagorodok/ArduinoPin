@@ -4,13 +4,13 @@
 class DigitalPin
 {
 public:
-  constexpr DigitalPin(uint8_t num, uint8_t mode) :
+  inline DigitalPin(uint8_t num, uint8_t mode) :
     DigitalPin(num, mode, HIGH) {}
-  constexpr DigitalPin(uint8_t num, uint8_t mode, bool activeState) :
+  inline DigitalPin(uint8_t num, uint8_t mode, bool activeState) :
     num(num), inactiveState(!activeState) {
     pinMode(num, mode);
   }
-  constexpr DigitalPin(uint8_t num, uint8_t mode, bool activeState, bool initialValue) :
+  inline DigitalPin(uint8_t num, uint8_t mode, bool activeState, bool initialValue) :
     DigitalPin(num, mode, activeState) {
     setValue(initialValue);
   }
