@@ -38,6 +38,9 @@ public:
   inline void setValue(bool value) {
     digitalWrite(num, inactiveState xor value);
   }
+  inline void set(bool value) {
+    setValue(value);
+  }
   inline void on() {
     setValue(true);
   }
