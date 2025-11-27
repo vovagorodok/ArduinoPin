@@ -1,7 +1,7 @@
 #pragma once
 #include <Arduino.h>
 
-#if defined(ESP32)
+#if defined(ARDUINO_ARCH_ESP32)
 using AnalogValue = uint16_t;
 #else
 using AnalogValue = int;
@@ -19,6 +19,11 @@ public:
   inline AnalogValue value() const {
     return analogRead(num);
   }
+#if defined(ARDUINO_ARCH_ESP32)
+  inline uint32_t millivolts() const {
+    return analogReadMilliVolts(num);
+  }
+#endif
 
 private:
   const uint8_t num;

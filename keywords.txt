@@ -1,23 +1,26 @@
 # Datatypes (KEYWORD1)
-DigitalPin	KEYWORD1
+DigitalPin KEYWORD1
 DigitalInputPin	KEYWORD1
-DigitalPulledPin	KEYWORD1
-DigitalOutputPin	KEYWORD1
+DigitalPulledPin KEYWORD1
+DigitalOutputPin KEYWORD1
 AnalogInputPin KEYWORD1
 ScopedOn KEYWORD1
 ScopedOff KEYWORD1
 
 # Methods and Functions (KEYWORD2)
-on	KEYWORD2
-off	KEYWORD2
-value    KEYWORD2
-operator bool()   KEYWORD2
-setValue    KEYWORD2
+on  KEYWORD2
+off KEYWORD2
+isOn  KEYWORD2
+isOff KEYWORD2
+value KEYWORD2
+operator bool() KEYWORD2
+setValue KEYWORD2
 change  KEYWORD2
 setMode KEYWORD2
-detachInterrupt    KEYWORD2
-attachInterrupt    KEYWORD2
-operator=   KEYWORD2
+detachInterrupt KEYWORD2
+attachInterrupt KEYWORD2
+operator= KEYWORD2
+millivolts KEYWORD2
 
 # Instances (KEYWORD2)
 

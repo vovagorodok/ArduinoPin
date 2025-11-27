@@ -23,11 +23,17 @@ public:
     return *this;
   }
 
-  inline operator bool() const {
-    return value();
-  }
   inline bool value() const {
     return digitalRead(num) xor inactiveState;
+  }
+  inline bool isOn() const {
+    return value();
+  }
+  inline bool isOff() const {
+    return !value();
+  }
+  inline operator bool() const {
+    return value();
   }
   inline void setValue(bool value) {
     digitalWrite(num, inactiveState xor value);
@@ -53,7 +59,7 @@ public:
   inline void detachInterrupt() {
     ::detachInterrupt(digitalPinToInterrupt(num));
   }
-#if defined(ESP32)
+#if defined(ARDUINO_ARCH_ESP32)
   inline void attachInterrupt(FunctionPtr functionPtr, uint8_t mode) {
     ::attachInterrupt(digitalPinToInterrupt(num), functionPtr, mode);
   }
