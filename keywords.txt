@@ -15,6 +15,7 @@ isOff KEYWORD2
 value KEYWORD2
 operator bool() KEYWORD2
 setValue KEYWORD2
+set KEYWORD2
 change  KEYWORD2
 setMode KEYWORD2
 detachInterrupt KEYWORD2
