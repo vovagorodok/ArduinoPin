@@ -82,8 +82,12 @@ public:
   }
 #pragma GCC diagnostic pop
 
-#else
+#elif defined(ARDUINO_ARCH_SAMD)
   inline void attachInterrupt(FunctionPtr functionPtr, PinStatus mode) {
+    ::attachInterrupt(digitalPinToInterrupt(num), functionPtr, mode);
+  }
+#else
+  inline void attachInterrupt(FunctionPtr functionPtr, int mode) {
     ::attachInterrupt(digitalPinToInterrupt(num), functionPtr, mode);
   }
 #endif
@@ -108,7 +112,11 @@ public:
   inline DigitalPulledPin(uint8_t num) :
     DigitalPulledPin(num, HIGH) {}
   inline DigitalPulledPin(uint8_t num, bool activeState) :
+#ifdef INPUT_PULLDOWN
     DigitalPin(num, activeState ? INPUT_PULLDOWN : INPUT_PULLUP, activeState) {}
+#else
+    DigitalPin(num, activeState ? INPUT : INPUT_PULLUP, activeState) {}
+#endif
 };
 
 class DigitalOutputPin : public DigitalPin
