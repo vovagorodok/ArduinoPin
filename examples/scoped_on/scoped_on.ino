@@ -1,4 +1,5 @@
 #include <ArduinoPin.h>
+#include <ScopedSwitch.h>
 #include <Arduino.h>
 
 #define LED_NUM 4
@@ -11,6 +12,6 @@ void setup() {
 
 void loop() {
     delay(1000);
-    ScopedOn on(led);
+    ScopedOn<DigitalOutputPin> on(led);
     delay(1000);
 }
