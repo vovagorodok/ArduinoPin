@@ -1,8 +1,8 @@
 #include <ArduinoPin.h>
 #include <Arduino.h>
 
-#define POTENTIOMETR_NUM 4
-AnalogInputPin potentiometer(POTENTIOMETR_NUM);
+#define POTENTIOMETER_NUM 4
+AnalogInputPin potentiometer(POTENTIOMETER_NUM);
 
 void setup() {
     Serial.begin(115200);
